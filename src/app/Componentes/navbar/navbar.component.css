@@ -5,22 +5,13 @@
 
 }
 div h1{
-    position: relative;
-    top: 200px;
-    left: 330px;
+  
     width: 700px;
     height: 100px;
     background-color: rgba(46, 45, 45, 0.592);
 }
 div h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    top: 200px;
-    left: 440px;
-
+  
     width: 500px;
     height: 100px;
     
