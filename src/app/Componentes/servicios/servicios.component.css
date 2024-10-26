@@ -1,0 +1,349 @@
+/*Servicios*/
+.servicios {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+   
+
+    background-color: black;
+
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.servicios h2 {
+  color: white;
+  position: relative;
+  top: 50px;
+  border-bottom: 0.5px solid grey;
+}
+
+
+
+.otroContenedor{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+}    
+
+.contenedorImagenesdeServicios {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  width: 90vw;
+  height: 400px;
+}
+
+.contenedorImagenesdeServicios div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  
+  height: 90%;
+  width: 80%;
+
+  border-radius: 5%;
+  background-color: rgb(241, 79, 233);
+  border-image: fill 0 linear-gradient(#0001, #212121);
+  transition: 1s;
+}
+
+.contenedorImagenesdeServicios div:hover {
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+.servicio img {
+    width: 200px;
+    min-width: 300px;
+    height: 190px;
+    margin-bottom: 50px;
+    border-radius: 2%;
+}
+
+.contenedorImagenesdeServicios p {
+  color: white;
+  border-bottom: 0.3px solid grey;
+}
+
+
+.verPrecios {
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  border: 0.3px solid white;
+  border-radius: 10%;
+  position: relative;
+  bottom: 50px;
+}
+.verPrecios button {
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+.verPrecios button:hover {
+  cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+    * {
+        padding: 0;
+        margin: 0;
+      } 
+      
+    
+      .servicios {
+        height: 1200px;
+        background-color: black;
+  
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+    
+      .otroContenedor{
+          display: flex;
+          flex-direction: column;
+      
+          
+          height: 80%;
+  
+          align-items: center;
+          justify-content: center;
+  
+          position: relative;
+          top: 100px;
+          
+          
+      }   
+    
+      .servicios div h2 {
+        color: white;
+        border-bottom: 0.5px solid grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      
+      .contenedorImagenesdeServicios {
+          display: flex;
+          flex-direction: column;
+  
+          position: relative;
+          bottom: 130px;
+  
+  
+          height: 40%;
+  
+         justify-content: center;
+          
+          
+     
+      }
+    
+      .servicio {
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+        
+        
+      
+  
+        border-radius: 2%;
+        background-color: rgb(175, 67, 218);
+        border-image: fill 0 linear-gradient(#0001, #212121);
+      }
+    
+      img {
+        
+        width: 150px;
+        height: 150px;
+  
+        margin-top: 10px;
+      }
+    
+      .contenedorImagenesdeServicios p {
+        position: relative;
+        bottom: 47px;
+        color: white;
+        border-bottom: 0.3px solid grey;
+      }
+  
+  
+  
+  
+  
+      .verPrecios {
+          text-align: center;
+  
+          width: 180px;
+          height: 25px;
+  
+          border: 0.3px solid white;
+          border-radius: 10%;
+  
+          position: relative;
+          bottom:50px;
+             
+        }
+        .verPrecios button {
+          color: white;
+          border: none;
+          background-color: transparent;
+          position: relative;
+          
+        }
+        .verPrecios button a{
+          position: relative;
+          top: 1px;
+        }
+      
+        .verPrecios button:hover {
+          cursor: pointer;
+      }
+     
+
+}
+
+
+
+@media (max-width: 640px) {
+    * {
+      padding: 0;
+      margin: 0;
+    } 
+    
+  
+    .servicios {
+      height: 1200px;
+      background-color: black;
+
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+  
+    .otroContenedor{
+        display: flex;
+        flex-direction: column;
+    
+        
+        height: 80%;
+
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        top: 100px;
+        
+        
+    }   
+  
+    .servicios div h2 {
+      color: white;
+      border-bottom: 0.5px solid grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    
+    .contenedorImagenesdeServicios {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        bottom: 130px;
+
+
+        height: 40%;
+
+       justify-content: center;
+        
+        
+   
+    }
+  
+    .servicio {
+      display: flex;
+      flex-direction: column;
+      
+      text-align: center;
+      
+      
+    
+
+      border-radius: 2%;
+      background-color: rgb(175, 67, 218);
+      border-image: fill 0 linear-gradient(#0001, #212121);
+    }
+  
+    img {
+      
+      width: 150px;
+      height: 150px;
+
+      margin-top: 10px;
+    }
+  
+    .contenedorImagenesdeServicios p {
+      position: relative;
+      bottom: 47px;
+      color: white;
+      border-bottom: 0.3px solid grey;
+    }
+
+
+
+
+
+    .verPrecios {
+        text-align: center;
+
+        width: 180px;
+        height: 25px;
+
+        border: 0.3px solid white;
+        border-radius: 10%;
+
+        position: relative;
+        bottom:50px;
+           
+      }
+      .verPrecios button {
+        color: white;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        
+      }
+      .verPrecios button a{
+        position: relative;
+        top: 1px;
+      }
+    
+      .verPrecios button:hover {
+        cursor: pointer;
+    }
+    
+}  
