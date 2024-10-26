@@ -1,0 +1,33 @@
+footer{
+    background-image: url(/assets/img/fondos/fondoNewsletter.jpg);
+    background-repeat: repeat;
+    
+  
+}
+li{
+   background-color: rgba(0, 0, 0, 0.539);
+}
+span{
+    background-color: rgba(0, 0, 0, 0.539);
+}
+
+
+@media (max-width: 640px) {
+
+    footer{
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+
+    }
+
+}

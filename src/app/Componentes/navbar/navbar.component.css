@@ -1,20 +1,24 @@
 .navegacion{
-    background-image: url(/assets/img/fondos/background.jpg);
+    background-image: url(/assets/img/fondos/background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+     
+
 
 }
+
 div h1{
   
     width: 700px;
     height: 100px;
-    background-color: rgba(46, 45, 45, 0.592);
+    
 }
 div h2{
   
     width: 500px;
     height: 100px;
     
-    background-color: rgba(46, 45, 45, 0.592);
+    
+    
   
 }
