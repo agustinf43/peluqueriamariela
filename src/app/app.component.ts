@@ -7,11 +7,12 @@ import { PrincipalComponent } from "./Componentes/principal/principal.component"
 import { ServiciosComponent } from "./Componentes/servicios/servicios.component";
 import { CommonModule } from '@angular/common';
 import { GaleriaComponent } from "./Componentes/galeria/galeria.component";
+import { NovedadesComponent } from "./Componentes/novedades/novedades.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule, GaleriaComponent],
+  imports: [RouterOutlet, NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule, GaleriaComponent, NovedadesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
