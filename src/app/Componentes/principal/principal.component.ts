@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-principal',
   standalone: true,
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
+
 
 }

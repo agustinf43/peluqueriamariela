@@ -9,11 +9,12 @@ import { CommonModule } from '@angular/common';
 import { GaleriaComponent } from "./Componentes/galeria/galeria.component";
 import { NovedadesComponent } from "./Componentes/novedades/novedades.component";
 import { FooterComponent } from './Componentes/footer/footer.component';
+import { ContactowhatsappComponent } from "./Componentes/contactowhatsapp/contactowhatsapp.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule, GaleriaComponent, NovedadesComponent, FooterComponent],
+  imports: [NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule, GaleriaComponent, NovedadesComponent, FooterComponent, ContactowhatsappComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -23,4 +24,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     initFlowbite();
   }
+
+
+
+
 }
