@@ -11,7 +11,20 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
   
+  navegarAlComponente(ComponenteId: string): void {
+    const element = document.getElementById(ComponenteId);
+    if (element) {
+      element.scrollIntoView({ behavior:'smooth'});
+    }
+  }
+
+  mostrarMensaje(){
+    alert("Proximamente")
+  }
+
+
 
   
 
-}
+}//termina la clase navbarComponent
+

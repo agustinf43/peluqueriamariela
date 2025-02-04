@@ -10,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  navegarAlComponente(ComponenteId: string): void {
+    const element = document.getElementById(ComponenteId);
+    if (element) {
+      element.scrollIntoView({ behavior:'smooth'});
+    }
+  }
+
 }
