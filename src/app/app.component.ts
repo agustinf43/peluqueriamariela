@@ -11,10 +11,13 @@ import { NovedadesComponent } from "./Componentes/novedades/novedades.component"
 import { FooterComponent } from './Componentes/footer/footer.component';
 import { ContactowhatsappComponent } from "./Componentes/contactowhatsapp/contactowhatsapp.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule, GaleriaComponent, NovedadesComponent, FooterComponent, ContactowhatsappComponent],
+  imports: [NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule,
+     GaleriaComponent, NovedadesComponent, FooterComponent, ContactowhatsappComponent],
+     
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

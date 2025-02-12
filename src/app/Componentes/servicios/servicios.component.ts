@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
 })
+
 export class ServiciosComponent {
   
   servicios=[
@@ -32,6 +34,16 @@ export class ServiciosComponent {
     }
 
   ]
-   
+  
+  constructor(private router: Router) {}
+
+    
+  verListaPrecios() {
+    const url = this.router.serializeUrl( //se declara una constante y se almacena un URLtree convertido en string por serializeUrl
+      this.router.createUrlTree(['/listadeprecios'])//crea un objeto UrlTree a partir de un array de segmentos de ruta.
+    );
+    console.log('URL generada:', url); // Verifica la URL en la consola
+    window.open(url, '_blank');//Abre una pestaña nueva con la Url '/listadeprecios'
+  }
   
 }

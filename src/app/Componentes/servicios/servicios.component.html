@@ -7,7 +7,7 @@
         <div class="contenedorImagenesdeServicios" *ngFor="let s of servicios" >
     
             <div class="servicio">
-                <img [src]="s.imagen" [alt]="s.alt" />
+                <img [src]="s.imagen" [title]="s.descripcion" [alt]="s.alt" />
                 <p id="NombreServicio">{{s.nombre}}</p>
             </div>
   
@@ -18,7 +18,7 @@
 
   <div class="verPrecios">
     <button>
-      <a href="/listaDePrecios" target="_blank">Ver Lista de Precios</a>
+      <a (click)="verListaPrecios()">Ver Lista de Precios</a>
     </button>
   </div>
 
