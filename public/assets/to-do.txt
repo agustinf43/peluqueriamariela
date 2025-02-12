@@ -1,0 +1,8 @@
+1. Hacer que funcione el boton "ver precios"
+2. Hacer la lista de precios 
+3. Corregir el icono de whatsapp 
+4. Cambiar logo de la peluqueria
+5. Hacer el scroll smoth
+6. Hacer que las rutas cambien con el scroll
+7. Hacer más util el NavBar
+8. Terminar el responsive
