@@ -1,9 +1,9 @@
 <figure class="contactoWSP">
-  <button>
+  <button *ngFor="let i of wspbtn">
     <img
-      src="/public/assets/img/iconos/whatsapp-100-.png"
-      alt="Envia un mensaje a mi WhatsApp"
-      title="Envia un mensaje a mi WhatsApp"
+      [src]="i.imgUrl"
+      [alt]="i.imgAlt"
+      [title]="i.imgTitle"
     />
   </button>
   <p>contactanos</p>
