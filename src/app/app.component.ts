@@ -16,7 +16,7 @@ import { ContactowhatsappComponent } from "./Componentes/contactowhatsapp/contac
   selector: 'app-root',
   standalone: true,
   imports: [NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule,
-     GaleriaComponent, NovedadesComponent, FooterComponent, ContactowhatsappComponent],
+     GaleriaComponent, NovedadesComponent, FooterComponent, ContactowhatsappComponent, RouterOutlet],
      
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

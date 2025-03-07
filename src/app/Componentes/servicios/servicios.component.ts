@@ -1,49 +1,41 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
+
+import { listaServiciosService } from '../../services/listaServicios.service'; 
+import { Servicio } from '../../modules/listaServicios';
+
 
 @Component({
   selector: 'app-servicios',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
 })
 
-export class ServiciosComponent {
+export class ServiciosComponent implements OnInit {
   
-  servicios=[
-    {
-      nombre:"Corte De Cabello",
-      imagen:"/assets/img/servicios/fotoCortes.jpg",
-      alt:"imagen de Servicio de Cortes de pelo",
-      descripcion:"Renueva tu estilo con nuestro corte de cabello profesional."
-
-    },{
-      nombre:"Pintura",
-      imagen:"/assets/img/servicios/fotoPintura.jpg",
-      alt:"imagen de Servicio de Pintura",
-      descripcion:"Transforma tu estilo con nuestro servicio de pintura."
-      
-    },{
-      nombre:"Peinados",
-      imagen:"/assets/img/servicios/fotoPeinado.jpg",
-      alt:"Imagen de Servicio de Peinados",
-      descripcion:"Prepárate para brillar con nuestros peinados para ocasiones especiales."
-    }
-
-  ]
+  serviciosLista: Servicio[]=[]; 
   
-  constructor(private router: Router) {}
+  constructor(private svc: listaServiciosService){}
 
-    
-  verListaPrecios() {
-    const url = this.router.serializeUrl( //se declara una constante y se almacena un URLtree convertido en string por serializeUrl
-      this.router.createUrlTree(['/Precios'])//crea un objeto UrlTree a partir de un array de segmentos de ruta.
-    );
-    console.log('URL generada:', url); // Verifica la URL en la consola
-    window.open(url, '_blank');//Abre una pestaña nueva con la Url '/Precios'
+  ngOnInit(): void {
+    this.mostrarListaDeServicios();
   }
-  
+
+  mostrarListaDeServicios(): void {
+    this.svc.getListaDeServicios().subscribe({
+      next: (data) => {
+        this.serviciosLista = data;
+        console.log(JSON.stringify( this.serviciosLista));
+      },
+      error: (error) => {
+        console.error('Error al cargar la info', error);
+      },
+    });
+  }
+
+
 }
