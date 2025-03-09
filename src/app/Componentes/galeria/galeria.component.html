@@ -1,51 +1,30 @@
 
 <div class="bg-gray-950 h-20 flex items-center justify-center"><h4 style=" text-align: center; color: white; font-size: 20px;" id="Galeria" >Galeria</h4></div>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-950 p-5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-950 p-5" *ngFor="let i of listaImagenes">
     <div class="grid gap-4">
         <div >
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://comfenalcoquindio.com/wp-content/uploads/2022/05/tecnico-en-peluqueria.jpg" alt="">
+            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
         </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://www.altacapacitacion.com/product_images/cursos-en-acp/aprender/2__21703_std.jpg" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYzOnzh3Lb8pq8ejdJihSkL3OYFpwkIPIUw&s" alt="">
+    </div>
+    
+    <div class="grid gap-4">
+        <div >
+            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
         </div>
     </div>
     <div class="grid gap-4">
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://cursos.com/wp-content/uploads/2021/01/historia-de-la-peluqueria-710x570.jpg.webp" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://www.academiacasanova.com/wp-content/uploads/2024/08/Academia-Casanova-peluqueria-y-barberia-masculina.jpg" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://robertocarrillo1998.es/wp-content/uploads/2022/12/blog13.jpg.webp" alt="">
+        <div >
+            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
         </div>
     </div>
     <div class="grid gap-4">
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://img.freepik.com/foto-gratis/mujer-recibiendo-tratamiento-peluqueria_23-2149230957.jpg" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYqb5fHJDh2J2e6Cj_CpBIbGH4cXj1k-lVxFR2LetcCf-btKrPendvtHOfPADAR_kLcf0&usqp=CAU" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://forjandoelfuturo.com.ar/wp-content/uploads/2021/12/peluqueria.jpg" alt="">
+        <div >
+            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
         </div>
     </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8PQfiRFUrjcQJvSnYmjIxjXvN3rsN5AZ1Dg&s" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" src="https://www.eurostil.com/wp-content/uploads/2021/12/blog-novedades-1024x1024.jpg" alt="">
-        </div>
-        <div>
-            <img class="shadow-md shadow-gray-800h-auto max-w-full rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNleoq40gIbYyMEqlnuHM-xWv1wtG-yEg_Xg&s" alt="">
-        </div>
-    </div>
+
+
 </div>
 
 
