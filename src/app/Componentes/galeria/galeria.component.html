@@ -1,31 +1,14 @@
 
 <div class="bg-gray-950 h-20 flex items-center justify-center"><h4 style=" text-align: center; color: white; font-size: 20px;" id="Galeria" >Galeria</h4></div>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-950 p-5" *ngFor="let i of listaImagenes">
-    <div class="grid gap-4">
-        <div >
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
-        </div>
+
+
+
+
+
+
+<div class="image-container  bg-gray-950">
+    <div *ngFor="let img of listaImagenes; let i = index" class="image-item ">
+      <img [src]="img.imagen" alt="Imagen {{i + 1}}" class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg">
     </div>
-    
-    <div class="grid gap-4">
-        <div >
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div >
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div >
-            <img class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg" [src]="i.imagen">
-        </div>
-    </div>
-
-
-</div>
-
-
-
+  </div>

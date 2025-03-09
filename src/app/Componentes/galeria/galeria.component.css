@@ -1,0 +1,17 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las imágenes */
+  }
+  
+  .image-item {
+    flex: 1 1 calc(25% - 10px); /* 25% para 4 imágenes por fila, ajustando el gap */
+    box-sizing: border-box;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+  }
