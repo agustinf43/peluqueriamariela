@@ -1,0 +1,33 @@
+[
+    {
+     "Imagen":"https://images.pexels.com/photos/3356170/pexels-photo-3356170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+     "NombreServicio":"Corte de cabello",
+     "Corto": "$39.999",
+     "Melena": "$49.999",
+     "Largo": "$69.999",
+     "ExtraLargo": "$79.999",
+     "ExtraLargoAbundante": "$89.9",
+     "SoloFlequillo": "$19.9"   
+    },
+    {
+        "Imagen":"https://images.pexels.com/photos/7388930/pexels-photo-7388930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "NombreServicio":"Pintura",
+        "Corto": "$39.999",
+        "Melena": "$49.999",
+        "Largo": "$69.999",
+        "ExtraLargo": "$79.999",
+        "ExtraLargoAbundante": "$89.999",
+        "SoloFlequillo": "$19.999"   
+    },
+    {
+        "Imagen":"https://images.pexels.com/photos/355063/pexels-photo-355063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "NombreServicio":"Peinados",
+        "Corto": "$39.999",
+        "Melena": "$49.999",
+        "Largo": "$69.999",
+        "ExtraLargo": "$79.999",
+        "ExtraLargoAbundante": "$89.999",
+        "SoloFlequillo": "$19.999"   
+    }
+   
+]

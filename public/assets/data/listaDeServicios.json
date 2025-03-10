@@ -5,7 +5,6 @@
           "imagen":"/assets/img/servicios/fotoCortes.jpg",
           "alt":"imagen de Servicio de Cortes de pelo",
           "descripcion":"Renueva tu estilo con nuestro corte de cabello profesional."
-    
         },{
           "nombre":"Pintura",
           "imagen":"/assets/img/servicios/fotoPintura.jpg",
@@ -17,7 +16,7 @@
           "imagen":"/assets/img/servicios/fotoPeinado.jpg",
           "alt":"Imagen de Servicio de Peinados",
           "descripcion":"Prepárate para brillar con nuestros peinados para ocasiones especiales."
-        }
+        } 
 
 
 ] 

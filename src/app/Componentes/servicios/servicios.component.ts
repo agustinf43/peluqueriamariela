@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; // Importa Component y OnInit para crear el componente
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'; // Importa Component y OnInit para crear el componente
 import { CommonModule } from '@angular/common'; // Importa CommonModule para usar directivas comunes como *ngFor
 import { listaServiciosService } from '../../services/listaServicios.service'; // Importa el servicio listaServiciosService
 import { Servicio } from '../../modules/listaServicios'; // Importa la interfaz Servicio
@@ -11,6 +11,25 @@ import { Servicio } from '../../modules/listaServicios'; // Importa la interfaz 
   styleUrl: './servicios.component.css', // Ruta al archivo de estilos CSS
 })
 export class ServiciosComponent implements OnInit {
+
+
+  @Output() mostrarPrecios = new EventEmitter<void>();
+
+  verPrecios() {
+    this.mostrarPrecios.emit();
+  }
+
+  textoBoton: string = 'Ver lista de Precios';
+
+  // Método para cambiar el texto del botón
+  cambiarTexto(): void {
+    if (this.textoBoton === 'Ver lista de Precios') {
+      this.textoBoton = 'Cerrar lista';
+    } else {
+      this.textoBoton = 'Ver lista de Precios';
+    }
+  } 
+
   serviciosLista: Servicio[] = []; // Define una propiedad para almacenar la lista de servicios
 
   constructor(private svc: listaServiciosService) {} // Inyecta el servicio listaServiciosService

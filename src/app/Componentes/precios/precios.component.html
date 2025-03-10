@@ -1,1 +1,41 @@
-<p>precios works!</p>
+<div class="contenedorExterior h-screen bg-gray-950">
+
+    <div class="container mx-auto px-4 py-8 bg-gray-950">
+        <div class="overflow-x-auto">
+          <table class="min-w-full border-collapse">
+            <thead>
+              <tr class="border-b">
+                <th class="text-left py-2 w-1/4 text-white">Servicio</th>
+                <th class="text-left py-2 w-1/4 text-white">Precio</th>
+                <th class="text-left py-2 w-1/6 text-white">Turno</th>
+              </tr>
+            </thead>
+            <!--SE REPITE CON NGFOR-->
+        <tbody *ngFor="let i of listaPrecios">
+              
+              <tr class="border-b">
+                <td class="py-4">
+                  <div class="flex flex-col">
+                    <div class="mb-2">
+                      <img [src]="i.Imagen" class="rounded w-64 h-32">
+                    </div>
+                    <div class="font-medium text-white">{{i.NombreServicio}}</div>
+                  </div>
+                </td>
+                <td class="py-4">
+                <div class="flex flex-col space-y-1">
+                    <div class="text-white">Corto <span class="text-white font-medium">{{i.Corto}}</span></div>
+                    <div class="text-white">Melena <span class="text-white font-medium">{{i.Melena}}</span></div>
+                    <div class="text-white">Largo <span class="text-white font-medium">{{i.Largo}}</span></div>
+                    <div class="text-white">Extra Largo <span class="text-white font-medium">{{i.ExtraLargo}}</span></div>
+                    <div class="text-white">Extra Largo Abundante <span class="text-white font-medium">{{i.ExtraLargoAbundante}}</span></div>
+                    <div class="text-sm text-white">Solo Flequillo <span class="text-white font-medium">{{i.SoloFlequillo}}</span></div>
+                </div>    
+            </td>
+            <td class="py-4">
+              <button class="border border-pink-500 text-pink-500 rounded-full px-6 py-2 hover:bg-pink-50">Reservar</button>
+            </td>
+        </tbody>
+</table>
+
+</div>
