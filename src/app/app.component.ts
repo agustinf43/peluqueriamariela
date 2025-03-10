@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 import { GaleriaComponent } from "./Componentes/galeria/galeria.component";
 import { NovedadesComponent } from "./Componentes/novedades/novedades.component";
 import { FooterComponent } from './Componentes/footer/footer.component';
-import { ContactowhatsappComponent } from "./Componentes/contactowhatsapp/contactowhatsapp.component";
+
 import { PreciosComponent } from "./Componentes/precios/precios.component";
 
 
@@ -17,7 +17,7 @@ import { PreciosComponent } from "./Componentes/precios/precios.component";
   selector: 'app-root',
   standalone: true,
   imports: [NavbarComponent, PrincipalComponent, ServiciosComponent, CommonModule,
-    GaleriaComponent, NovedadesComponent, FooterComponent, PreciosComponent],
+    GaleriaComponent, NovedadesComponent, FooterComponent, PreciosComponent,RouterOutlet ],
      
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -29,9 +29,7 @@ export class AppComponent implements OnInit {
     initFlowbite();
   }
  
-  //mostrar precios o servicios
-
-  mostrarServicios = true; // Mostrar servicios al inicio
+  //mostrar precios 
   mostrarPrecios = false;
 
   togglePrecios() {

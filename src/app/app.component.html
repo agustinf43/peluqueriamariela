@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <app-principal></app-principal>
-<app-servicios *ngIf="mostrarServicios" (mostrarPrecios)="togglePrecios()"></app-servicios>
+<app-servicios (mostrarPrecios)="togglePrecios()"></app-servicios>
 <app-precios *ngIf="mostrarPrecios"></app-precios>
 <app-galeria></app-galeria>
 <app-novedades></app-novedades>

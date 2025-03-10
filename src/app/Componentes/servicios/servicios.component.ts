@@ -2,11 +2,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core'; // Impo
 import { CommonModule } from '@angular/common'; // Importa CommonModule para usar directivas comunes como *ngFor
 import { listaServiciosService } from '../../services/listaServicios.service'; // Importa el servicio listaServiciosService
 import { Servicio } from '../../modules/listaServicios'; // Importa la interfaz Servicio
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-servicios', // Define el selector del componente
   standalone: true, // Indica que este componente es standalone (no necesita un módulo)
-  imports: [CommonModule], // Importa CommonModule para usar directivas como *ngFor
+  imports: [CommonModule, ], // Importa CommonModule para usar directivas como *ngFor
   templateUrl: './servicios.component.html', // Ruta al archivo de plantilla HTML
   styleUrl: './servicios.component.css', // Ruta al archivo de estilos CSS
 })
@@ -15,20 +16,21 @@ export class ServiciosComponent implements OnInit {
 
   @Output() mostrarPrecios = new EventEmitter<void>();
 
+  textoBoton: string = 'Ver lista de Precios';
   verPrecios() {
     this.mostrarPrecios.emit();
-  }
-
-  textoBoton: string = 'Ver lista de Precios';
-
-  // Método para cambiar el texto del botón
-  cambiarTexto(): void {
+    
+    // Método para cambiar el texto del botón
+  
     if (this.textoBoton === 'Ver lista de Precios') {
       this.textoBoton = 'Cerrar lista';
     } else {
       this.textoBoton = 'Ver lista de Precios';
     }
   } 
+
+
+  
 
   serviciosLista: Servicio[] = []; // Define una propiedad para almacenar la lista de servicios
 
