@@ -14,20 +14,24 @@ import { RouterLink } from '@angular/router';
 export class ServiciosComponent implements OnInit {
 
 
-  @Output() mostrarPrecios = new EventEmitter<void>();
+  // Define un evento de salida (`EventEmitter`) que se puede emitir desde este componente hacia el componente padre.
+@Output() mostrarPrecios = new EventEmitter<void>();
 
-  textoBoton: string = 'Ver lista de Precios';
-  verPrecios() {
-    this.mostrarPrecios.emit();
-    
-    // Método para cambiar el texto del botón
+textoBoton: string = 'Ver lista de Precios';
+
+// Método que realiza dos acciones:
+// 1. Emite el evento `mostrarPrecios` para notificar al componente padre que se ha solicitado mostrar u ocultar los precios.
+// 2. Cambia el texto del botón entre 'Ver lista de Precios' y 'Cerrar lista' para reflejar la acción que se realizará al hacer clic en él.
+verPrecios() {
+  this.mostrarPrecios.emit();
   
-    if (this.textoBoton === 'Ver lista de Precios') {
-      this.textoBoton = 'Cerrar lista';
-    } else {
-      this.textoBoton = 'Ver lista de Precios';
-    }
-  } 
+  // Cambia el texto del botón dependiendo de su valor actual.
+  if (this.textoBoton === 'Ver lista de Precios') {
+    this.textoBoton = 'Cerrar lista';
+  } else {
+    this.textoBoton = 'Ver lista de Precios';
+  }
+}
 
 
   
