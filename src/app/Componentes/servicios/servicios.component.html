@@ -1,27 +1,37 @@
-<div class="servicios" id="servi">
-
-    <div class="servicio-titulo"><h2>Servicios</h2></div>
-
-    <div class="otroContenedor" >
-    
-        <div class="contenedorImagenesdeServicios" *ngFor="let s of serviciosLista" >
-    
-            <div class="servicio">
-                <img [src]="s.imagen" [title]="s.descripcion" [alt]="s.alt" />
-                <p id="NombreServicio">{{s.nombre}}</p>
-            </div>
-  
-
+<!-- salon-carousel.component.html -->
+<div class="carousel-container  bg-black  ">
+  <div class="carousel-inner " *ngIf="serviciosLista.length > 0">
+    <div class="carousel-slide  " [@slideAnimation]="slideState">
+      <!-- Usamos la nueva animación con estado -->
+      <div class="service-card " *ngFor="let s of currentSlideServices">
+        <div class="service-image">
+          <img [src]="s.imagen" [alt]="s.alt">
         </div>
-
-    </div>    
-
-  <div class="verPrecios">
-    <button>
-      <a  (click)="verPrecios()"  >{{textoBoton}}</a>
-      
-    </button>
+        <div class="service-info">
+          <h3 class="service-name">{{ s.nombre }}</h3>
+          <p class="service-description">{{ s.descripcion }}</p>
+          
+        </div>
+      </div>
+    </div>
   </div>
 
-
+  <div class="carousel-controls">
+    <button class="control-prev" (click)="prevSlide()">
+      <span>&lsaquo;</span>
+    </button>
+    
+    <div class="carousel-indicators">
+      <span 
+        *ngFor="let _ of [].constructor(totalSlides); let i = index"
+        class="indicator"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+    
+    <button class="control-next" (click)="nextSlide()">
+      <span>&rsaquo;</span>
+    </button>
+  </div>
 </div>

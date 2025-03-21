@@ -1,349 +1,146 @@
-/*Servicios*/
-.servicios {
-    display: flex;
-    flex-direction: column;
-
-    height: 100vh;
-   
-
-    background-color: black;
-
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.servicios h2 {
-  color: white;
+/* salon-carousel.component.scss */
+.carousel-container {
+  width: 98,8vw;
+  height: 90vh;
+ 
   position: relative;
-  top: 50px;
-  border-bottom: 0.5px solid grey;
+  overflow: hidden;
+  
 }
 
+.carousel-inner {
+  position: relative;
+  width: 99%;
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  
+}
 
-
-.otroContenedor{
-    display: flex;
-    flex-direction: row;
-
-    width: 100%;
-
-}    
-
-.contenedorImagenesdeServicios {
+.carousel-slide {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid black;
-  width: 90vw;
-  height: 400px;
-}
-
-.contenedorImagenesdeServicios div {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: hidden;
+  gap: 20px;
+  width: 100%;
+  height:100%;
 
   
-  height: 90%;
-  width: 80%;
+  position: relative;
+  transition: transform 0.4s ease-in-out; /* Transición suave */
 
+}
+
+.service-card {
   border-radius: 5%;
   background-color: rgb(241, 79, 233);
   border-image: fill 0 linear-gradient(#0001, #212121);
-  transition: 1s;
-}
+  
+  height: 80%;
 
-.contenedorImagenesdeServicios div:hover {
-  transform: scale(1.1);
-  z-index: 3;
-}
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
-.servicio img {
-    width: 200px;
-    min-width: 300px;
-    height: 190px;
-    margin-bottom: 50px;
-    border-radius: 2%;
-}
-
-.contenedorImagenesdeServicios p {
-  color: white;
-  border-bottom: 0.3px solid grey;
-}
-
-
-.verPrecios {
-  text-align: center;
-  width: 200px;
-  height: 30px;
-  border: 0.3px solid white;
-  border-radius: 10%;
   position: relative;
-  bottom: 50px;
+  top: 30px;
+
+  flex: 0 0 calc(30% - 20px);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
-.verPrecios button {
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    margin-top: 30px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.service-info {
+  
+  padding: 15px;
+  text-align: center;
+}
+
+.service-name {
+  color:black;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.service-description {
+  color:white;
+  font-size: 14px;
+  
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.control-prev,
+.control-next {
+  background: #2a6496;
   color: white;
   border: none;
-  background-color: transparent;
-}
-
-.verPrecios button:hover {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s ease;
+  
+ 
 }
 
-
-@media (max-width: 1200px) {
-    * {
-        padding: 0;
-        margin: 0;
-      } 
-      
-    
-      .servicios {
-        height: 1200px;
-        background-color: black;
-  
-        display: flex;
-        flex-direction: column;
-        
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-      }
-    
-      .otroContenedor{
-          display: flex;
-          flex-direction: column;
-      
-          
-          height: 80%;
-  
-          align-items: center;
-          justify-content: center;
-  
-          position: relative;
-          top: 100px;
-          
-          
-      }   
-    
-      .servicios div h2 {
-        color: white;
-        border-bottom: 0.5px solid grey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    
-      
-      .contenedorImagenesdeServicios {
-          display: flex;
-          flex-direction: column;
-  
-          position: relative;
-          bottom: 130px;
-  
-  
-          height: 40%;
-  
-         justify-content: center;
-          
-          
-     
-      }
-    
-      .servicio {
-        display: flex;
-        flex-direction: column;
-        
-        text-align: center;
-        
-        
-      
-  
-        border-radius: 2%;
-        background-color: rgb(175, 67, 218);
-        border-image: fill 0 linear-gradient(#0001, #212121);
-      }
-    
-      img {
-        
-        width: 150px;
-        height: 150px;
-  
-        margin-top: 10px;
-      }
-    
-      .contenedorImagenesdeServicios p {
-        position: relative;
-        bottom: 47px;
-        color: white;
-        border-bottom: 0.3px solid grey;
-      }
-  
-  
-  
-  
-  
-      .verPrecios {
-          text-align: center;
-  
-          width: 180px;
-          height: 25px;
-  
-          border: 0.3px solid white;
-          border-radius: 10%;
-  
-          position: relative;
-          bottom:50px;
-             
-        }
-        .verPrecios button {
-          color: white;
-          border: none;
-          background-color: transparent;
-          position: relative;
-          
-        }
-        .verPrecios button a{
-          position: relative;
-          top: 1px;
-        }
-      
-        .verPrecios button:hover {
-          cursor: pointer;
-      }
-     
-
+.carousel-indicators {
+  display: flex;
+  gap: 8px;
+  margin: 0 15px;
 }
 
-
-
-@media (max-width: 640px) {
-    * {
-      padding: 0;
-      margin: 0;
-    } 
-    
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s ease;
   
-    .servicios {
-      height: 1200px;
-      background-color: black;
-
-      display: flex;
-      flex-direction: column;
-      
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
+  &.active {
+    background: #2a6496;
+  }
   
-    .otroContenedor{
-        display: flex;
-        flex-direction: column;
-    
-        
-        height: 80%;
-
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-        top: 100px;
-        
-        
-    }   
-  
-    .servicios div h2 {
-      color: white;
-      border-bottom: 0.5px solid grey;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    
-    .contenedorImagenesdeServicios {
-        display: flex;
-        flex-direction: column;
-
-        position: relative;
-        bottom: 130px;
-
-
-        height: 40%;
-
-       justify-content: center;
-        
-        
-   
-    }
-  
-    .servicio {
-      display: flex;
-      flex-direction: column;
-      
-      text-align: center;
-      
-      
-    
-
-      border-radius: 2%;
-      background-color: rgb(175, 67, 218);
-      border-image: fill 0 linear-gradient(#0001, #212121);
-    }
-  
-    img {
-      
-      width: 150px;
-      height: 150px;
-
-      margin-top: 10px;
-    }
-  
-    .contenedorImagenesdeServicios p {
-      position: relative;
-      bottom: 47px;
-      color: white;
-      border-bottom: 0.3px solid grey;
-    }
-
-
-
-
-
-    .verPrecios {
-        text-align: center;
-
-        width: 180px;
-        height: 25px;
-
-        border: 0.3px solid white;
-        border-radius: 10%;
-
-        position: relative;
-        bottom:50px;
-           
-      }
-      .verPrecios button {
-        color: white;
-        border: none;
-        background-color: transparent;
-        position: relative;
-        
-      }
-      .verPrecios button a{
-        position: relative;
-        top: 1px;
-      }
-    
-      .verPrecios button:hover {
-        cursor: pointer;
-    }
-    
-}  
+  &:hover {
+    background: #bbb;
+  }
+}

@@ -16,7 +16,23 @@
           "imagen":"/assets/img/servicios/fotoPeinado.jpg",
           "alt":"Imagen de Servicio de Peinados",
           "descripcion":"Prepárate para brillar con nuestros peinados para ocasiones especiales."
-        } 
+        },{
+          "nombre":"Peinados",
+          "imagen":"/assets/img/servicios/fotoPeinado.jpg",
+          "alt":"Imagen de Servicio de Peinados",
+          "descripcion":"Prepárate para brillar con nuestros peinados para ocasiones especiales."
+        },{
+          "nombre":"Peinados",
+          "imagen":"/assets/img/servicios/fotoPeinado.jpg",
+          "alt":"Imagen de Servicio de Peinados",
+          "descripcion":"Prepárate para brillar con nuestros peinados para ocasiones especiales."
+        },{
+          "nombre":"Peinados",
+          "imagen":"/assets/img/servicios/fotoPeinado.jpg",
+          "alt":"Imagen de Servicio de Peinados",
+          "descripcion":"Prepárate para brillar con nuestros peinados para ocasiones especiales."
+        }   
+
 
 
 ] 

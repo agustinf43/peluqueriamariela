@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LayoutPrincipalComponent } from './Componentes/layout-principal/layout-principal.component';
 
 
 export const routes: Routes = [
@@ -23,6 +24,15 @@ export const routes: Routes = [
     path:'Precios',
     loadComponent:() => import('./Componentes/precios/precios.component').then(m => m.PreciosComponent)
   },
+  {
+    path:'', redirectTo: 'PeluqueriaMariela', pathMatch:'full'  
+  },
+  {
+    path: 'PeluqueriaMariela', component: LayoutPrincipalComponent
+  },
+  {
+    path: '**', component: LayoutPrincipalComponent
+  }
   
   
   
