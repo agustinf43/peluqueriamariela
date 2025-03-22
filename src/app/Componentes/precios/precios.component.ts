@@ -2,11 +2,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { precios } from '../../modules/Precios';
 import { listaDePreciosService } from '../../services/listaDePrecios.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-precios',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './precios.component.html',
   styleUrl: './precios.component.css'
 })
@@ -44,6 +45,7 @@ export class PreciosComponent {
         });
     
       }
-    
+
+     
 
 }

@@ -1,3 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="!esRutaNuevoComponente()"></app-navbar>
+
 <router-outlet></router-outlet>
-<app-footer></app-footer> 
+
+<app-footer *ngIf="!esRutaNuevoComponente()"></app-footer>

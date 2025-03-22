@@ -4,32 +4,37 @@ import { initFlowbite } from 'flowbite';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './Componentes/navbar/navbar.component';
 import { FooterComponent } from './Componentes/footer/footer.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent,FooterComponent, RouterOutlet ],
+  imports: [NavbarComponent,FooterComponent, RouterOutlet,CommonModule],
      
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'peluqueriamariela';
+  rutaActual:string="";
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     initFlowbite();
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.rutaActual = event.url;
+    });
+
   }
  
-  //mostrar precios 
- // Variable booleana que controla si se deben mostrar los precios en la interfaz de usuario.
-// Inicialmente está en `false`, lo que significa que los precios no se muestran al principio.
-  mostrarPrecios = false;
-
-  
-// Método que alterna el valor de `mostrarPrecios` entre `true` y `false`.
-// Si `mostrarPrecios` es `true`, lo cambia a `false`, y viceversa.
-  togglePrecios() {
-    this.mostrarPrecios = !this.mostrarPrecios;
+  esRutaNuevoComponente() {
+    return this.rutaActual === '/Precios';
   }
 
 

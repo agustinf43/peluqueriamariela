@@ -5,7 +5,6 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 
-
 bootstrapApplication(AppComponent, appConfig).then((ref) => {
   
   providers:[

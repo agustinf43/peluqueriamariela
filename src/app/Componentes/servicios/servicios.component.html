@@ -1,37 +1,45 @@
-<!-- salon-carousel.component.html -->
-<div class="carousel-container  bg-black  ">
-  <div class="carousel-inner " *ngIf="serviciosLista.length > 0">
-    <div class="carousel-slide  " [@slideAnimation]="slideState">
-      <!-- Usamos la nueva animación con estado -->
-      <div class="service-card " *ngFor="let s of currentSlideServices">
-        <div class="service-image">
-          <img [src]="s.imagen" [alt]="s.alt">
-        </div>
-        <div class="service-info">
-          <h3 class="service-name">{{ s.nombre }}</h3>
-          <p class="service-description">{{ s.descripcion }}</p>
+  <h2 class="text-white text-center text-lg bg-gray-950 w-auto pb-3">Servicios</h2>
+<div class="contenedorServicios  bg-gray-950 p-4 flex flex-row items-center justify-center gap-4">
+  <!-- Botón de imagen previa -->
+
+  <a (click)="prevImg()" class="hover:cursor-pointer pr-8">
+    <svg class="w-10 h-10 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+    </svg>
+  </a>
+
+  <!-- Carrusel -->
+  <ngx-slick-carousel class="carousel w-10/12" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem class="service-card p-4  " *ngFor="let s of serviciosLista">
           
+
+      <div class="max-w-sm bg-purple-950 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <a (click)="verPrecios()" routerLink="/Precios">
+            <img class="rounded-t-lg " [src]="s.imagen" [alt]="s.alt" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black text-center dark:text-white">{{s.nombre}}</h5>
+            </a>
+            <p class="mb-3 font-normal text-white dark:text-gray-400 text-center">{{s.descripcion}}</p>
+           
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="carousel-controls">
-    <button class="control-prev" (click)="prevSlide()">
-      <span>&lsaquo;</span>
-    </button>
-    
-    <div class="carousel-indicators">
-      <span 
-        *ngFor="let _ of [].constructor(totalSlides); let i = index"
-        class="indicator"
-        [class.active]="i === currentIndex"
-        (click)="goToSlide(i)">
-      </span>
+
+
     </div>
+  </ngx-slick-carousel>
+
+  <!-- Botón de siguiente imagen -->
+  <a (click)="nextImg()" class="hover:cursor-pointer pl-8">
+    <svg class="w-10 h-10 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+    </svg>
+
+  </a>
+
+   
     
-    <button class="control-next" (click)="nextSlide()">
-      <span>&rsaquo;</span>
-    </button>
-  </div>
+ 
 </div>
