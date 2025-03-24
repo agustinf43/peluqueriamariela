@@ -33,11 +33,18 @@ export class AppComponent implements OnInit {
     initFlowbite();
 
 
+   
+
+
     // Detectar cambios de ruta para actualizar la lógica de visualización
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
+      this.rutaActual = event.url;
       const rutaActual = event.urlAfterRedirects;
+
+
+
       
       // Comprueba si la ruta actual está en la lista de excluidas
       this.deberiaUsarRouterOutlet = !this.rutasExcluidas.some(ruta => 
@@ -54,6 +61,7 @@ export class AppComponent implements OnInit {
 
     
 
+   
 
   }
   
