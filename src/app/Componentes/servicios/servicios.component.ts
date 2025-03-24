@@ -23,8 +23,27 @@ export class ServiciosComponent implements OnInit {
   serviciosLista: Servicio[] = []; // Define una propiedad para almacenar la lista de servicios
   
   slideConfig={
-    "slidesToShow":3, "slidesToScroll": 3, "infinite": true, "nextArrow":'false', "prevArrow":'false',
-  };
+    slidesToShow: 3, // Número de tarjetas visibles a la vez
+    slidesToScroll: 1, // Número de tarjetas que se desplazan al avanzar
+    autoplay: true, // Activa el autoplay
+    autoplaySpeed: 2000, // Velocidad del autoplay en milisegundos (3 segundos)
+    infinite: true, // Carrusel infinito
+    arrows: false, // Oculta las flechas de navegación (opcional)
+    responsive: [
+      {
+        breakpoint: 1024, // Pantallas medianas
+        settings: {
+          slidesToShow: 2, // Muestra 2 tarjetas
+        },
+      },
+      {
+        breakpoint: 768, // Pantallas pequeñas
+        settings: {
+          slidesToShow: 1, // Muestra 1 tarjeta
+        },
+      },
+    ],
+  }
   @ViewChild('slickModal') slickModal!: SlickCarouselComponent;
   prevImg(){
     this.slickModal.slickPrev();

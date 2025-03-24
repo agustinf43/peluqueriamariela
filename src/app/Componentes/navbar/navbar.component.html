@@ -47,7 +47,7 @@
           class="pl-0 md:pl-64 hidden w-full md:block md:w-auto bg-transparent"
           id="navbar-default"
         >
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+          <ul class="font-medium flex flex-col p-4  md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             <li>
               <a
                 (click)="navegarAlComponente('Acerca');"
@@ -62,7 +62,7 @@
             <li>
               <a
                 (click)="navegarAlComponente('servi');"
-                routerLink="Servicios"
+                routerLink="/Servicios"
                 class="block py-2 px-3 text-white md:p-0 dark:text-white hover:text-blue-900"
               >
                 Servicios
@@ -71,7 +71,7 @@
             <li>
               <a
                 (click)="navegarAlComponente('Galeria');"
-                routerLink="Galeria"
+                routerLink="/Galeria"
                 class="block py-2 px-3 text-white md:p-0 dark:text-white hover:text-blue-900"
               >
                 Galeria
@@ -79,10 +79,11 @@
             </li>
             <li>
               <a
-                (click)="mostrarMensaje();"
+                (click)="navegarAlComponente('Productos');"
+                routerLink="/Productos"
                 class="block py-2 px-3 text-white md:p-0 dark:text-white hover:text-blue-900"
               >
-                Tips
+                Productos
               </a>
             </li>
           </ul>

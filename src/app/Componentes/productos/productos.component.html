@@ -1,0 +1,52 @@
+<div class="contenedorProductos h-screen flex flex-col justify-center items-center bg-black">
+
+    <!-- Título -->
+    <h2 class="text-white text-center text-lg md:text-xl lg:text-2xl  w-full pb-10">
+        Productos
+    </h2>
+
+    <!-- Contenedor del carrusel y botones -->
+    <div class="flex flex-row items-center w-full max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Botón Anterior (izquierda) -->
+        <a (click)="prevImg()" class="hover:cursor-pointer pr-4 md:pr-8 order-1">
+            <svg class="w-8 h-8 md:w-10 md:h-10 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+        </a>
+
+        <!-- Carrusel -->
+        <div class="flex-1 overflow-hidden order-2">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                <div ngxSlickItem class="product-card px-2" *ngFor="let p of productosLista">
+                    <div class="max-w-sm bg-gray-900 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg" [src]="p.imagenProducto" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-white dark:text-white">
+                                    {{p.nombreProducto}}
+                                </h5>
+                            </a>
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-3xl font-bold text-white dark:text-white">
+                                    {{p.precioProducto}}
+                                </span>
+                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Agregar al carrito
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+
+        <!-- Botón Siguiente (derecha) -->
+        <a (click)="nextImg()" class="hover:cursor-pointer pl-4 md:pl-8 order-3">
+            <svg class="w-8 h-8 md:w-10 md:h-10 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+        </a>
+    </div>
+</div>
