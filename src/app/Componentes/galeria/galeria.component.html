@@ -1,11 +1,12 @@
+<div class="bg-gray-950 py-8 flex items-center justify-center">
+  <h4 class="text-white text-xl md:text-2xl lg:text-3xl font-medium" id="Galeria">Galeria</h4>
+</div>
 
-<div class="bg-gray-950 h-20 flex items-center justify-center"><h4 style=" text-align: center; color: white; font-size: 20px;" id="Galeria" >Galeria</h4></div>
-
-
-
-
-<div class="image-container  bg-gray-950">
-    <div *ngFor="let img of listaImagenes; let i = index" class="image-item ">
-      <img [src]="img.imagen" alt="Imagen {{i + 1}}" class="shadow-md shadow-gray-800 h-auto max-w-full rounded-lg">
+<div class="bg-gray-950 px-4 sm:px-6 lg:px-8 py-6">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+    <div *ngFor="let img of listaImagenes; let i = index" class="w-full aspect-square overflow-hidden rounded-lg">
+      <img [src]="img.imagen" alt="Imagen {{i + 1}}" 
+           class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
     </div>
   </div>
+</div>
