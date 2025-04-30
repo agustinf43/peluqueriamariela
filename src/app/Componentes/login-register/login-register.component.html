@@ -1,13 +1,43 @@
-<h2>{{ isRegistering ? 'Registrarse' : 'Iniciar sesión' }}</h2>
+<div class="min-h-screen flex items-center justify-center bg-gray-950 px-4">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 sm:p-10">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">
+      {{ isRegistering ? 'Registrarse' : 'Iniciar sesión' }}
+    </h2>
 
-<form (ngSubmit)="loginOrRegister()">
-  <input type="text" [(ngModel)]="username" name="username" placeholder="Usuario" required>
-  <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required>
-  <button type="submit">{{ isRegistering ? 'Registrarse' : 'Ingresar' }}</button>
-</form>
+    <form (ngSubmit)="loginOrRegister()" class="space-y-5">
+      <input
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Usuario"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Contraseña"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
+      />
+      <button
+        type="submit"
+        class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors"
+      >
+        {{ isRegistering ? 'Registrarse' : 'Ingresar' }}
+      </button>
+    </form>
 
-<p *ngIf="error" style="color: red;">{{ error }}</p>
+    <p *ngIf="error" class="text-red-600 mt-4 text-center">
+      {{ error }}
+    </p>
 
-<button (click)="toggleMode()">
-  {{ isRegistering ? 'Ya tengo cuenta' : 'Crear nueva cuenta' }}
-</button>
+    <button
+      (click)="toggleMode()"
+      class="w-full mt-6 text-sm text-gray-600 hover:underline transition-all"
+    >
+      {{ isRegistering ? 'Ya tengo cuenta' : 'Crear nueva cuenta' }}
+    </button>
+  </div>
+</div>
