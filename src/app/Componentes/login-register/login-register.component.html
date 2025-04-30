@@ -1,0 +1,13 @@
+<h2>{{ isRegistering ? 'Registrarse' : 'Iniciar sesión' }}</h2>
+
+<form (ngSubmit)="loginOrRegister()">
+  <input type="text" [(ngModel)]="username" name="username" placeholder="Usuario" required>
+  <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required>
+  <button type="submit">{{ isRegistering ? 'Registrarse' : 'Ingresar' }}</button>
+</form>
+
+<p *ngIf="error" style="color: red;">{{ error }}</p>
+
+<button (click)="toggleMode()">
+  {{ isRegistering ? 'Ya tengo cuenta' : 'Crear nueva cuenta' }}
+</button>

@@ -76,7 +76,13 @@ export class AppComponent implements OnInit {
   }
  
   esRutaNuevoComponente() {
-    return this.rutaActual === '/Precios';
+    if(this.rutaActual==="/administracion"){
+      return this.rutaActual=="/administracion"
+    }else if(this.rutaActual==="/login"){
+      return this.rutaActual==="/login"
+    }else{
+      return this.rutaActual==="/Precios"
+    } 
   }
 
 

@@ -1,9 +1,19 @@
 import { Routes } from '@angular/router';
 import { LayoutPrincipalComponent } from './Componentes/layout-principal/layout-principal.component';
+import { AdministracionComponent } from './Componentes/administracion/administracion.component';
+import { authGuard } from './guards/auth.guard';
+import { LoginComponent } from './Componentes/login-register/login-register.component';
 
 
 export const routes: Routes = [
 
+  { path: '', redirectTo: '/PeluqueriaMariela', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { 
+    path: 'administracion', 
+    component: AdministracionComponent,
+    canActivate: [authGuard]  // Protege esta ruta con el guard
+  },
   {
     path:'Bienvenido',
     loadComponent:() => import('./Componentes/navbar/navbar.component').then(m => m.NavbarComponent)
@@ -23,9 +33,6 @@ export const routes: Routes = [
   {
     path:'Precios',
     loadComponent:() => import('./Componentes/precios/precios.component').then(m => m.PreciosComponent)
-  },
-  {
-    path:'', redirectTo: 'PeluqueriaMariela', pathMatch:'full'  
   },
   {
     path: 'PeluqueriaMariela', component: LayoutPrincipalComponent
