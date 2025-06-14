@@ -1,11 +1,3 @@
 <app-navbar *ngIf="!esRutaNuevoComponente()"></app-navbar>
-
-<div [ngSwitch]="deberiaUsarRouterOutlet">
-    <div *ngSwitchCase="true">
-      <router-outlet></router-outlet>
-    </div>
-    <div *ngSwitchCase="false">
-        <app-layout-principal></app-layout-principal>
-    </div>
-  </div>
+<router-outlet></router-outlet>
 <app-footer *ngIf="!esRutaNuevoComponente()"></app-footer>

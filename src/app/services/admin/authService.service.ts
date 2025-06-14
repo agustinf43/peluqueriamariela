@@ -12,7 +12,7 @@ interface User {
 })
 export class AuthService {
   private users: User[] = [
-    { username: 'marirom', password: 'marirom', role: 'admin' },
+    { username: 'admin', password: 'admin', role: 'admin' },
     {username: "agustin", password:"1234", role:"user"}
   ];
 

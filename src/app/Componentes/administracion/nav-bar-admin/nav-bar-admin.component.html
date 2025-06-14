@@ -1,0 +1,24 @@
+<nav class="flex justify-center items-center bg-slate-600 h-12 px-4">
+        <ul class="flex flex-row gap-8 text-white font-medium">
+            <li class="hover:text-slate-200 cursor-pointer transition-colors duration-200 px-3 py-1 rounded hover:bg-slate-500">
+                
+                <a [routerLink]="['/administracion', 'administrarPrecios']">ADMINISTRAR PRECIOS</a>
+            </li>
+            <li class="hover:text-slate-200 cursor-pointer transition-colors duration-200 pxs-3 py-1 rounded hover:bg-slate-500">
+                <a [routerLink]="['/administracion', 'administrarProductos']">
+                    ADMINISTRAR PRODUCTOS
+                </a>
+            </li>
+            <li class="hover:text-slate-200 cursor-pointer transition-colors duration-200 px-3 py-1 rounded hover:bg-slate-500">
+                <a [routerLink]="['/administracion', 'administrarServicios']">
+                    ADMINISTRAR SERVICIOS
+                </a>
+            </li>
+            <li class="hover:text-slate-200 cursor-pointer transition-colors duration-200 px-3 py-1 rounded hover:bg-slate-500">
+                <a [routerLink]="['/administracion', 'administrarTurnos']">
+                    ADMINISTRAR TURNOS
+                </a>
+            </li>
+
+        </ul>
+    </nav>
